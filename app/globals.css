@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav-desktop .active {
+  @apply font-bold after:content-[""] 
+  after:block after:h-[4px] after:bg-primary after:inset-0 
+  after:mt-1 after:rounded;
+}
+
+.nav-mobile .active {
+  @apply font-bold text-white dark:text-primary !important;
+}
+
+.mbtn {
+  @apply btn border border-2 border-neutral 
+  hover:border-neutral;
+}
+
+.mbtn-primary {
+  @apply btn-primary text-white dark:text-[#1d232a];
+}
+
+.mbtn-ghost {
+  @apply btn-ghost text-black dark:text-gray-300 border border-2  
+  hover:border-neutral hover:bg-transparent;
+}
+
+.text-default-dark {
+  @apply dark:text-[#1d232a];
+}
