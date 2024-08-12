@@ -1,4 +1,9 @@
-export const menuItems = [
+interface ImenuItems {
+  name: string,
+  path: string
+}
+
+export const menuItems: ImenuItems[] = [
   {
     name: "Home",
     path: "/"

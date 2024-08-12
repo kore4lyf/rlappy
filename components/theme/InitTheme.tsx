@@ -6,11 +6,10 @@ const InitTheme: React.FC = () => {
   useEffect(() => {
     // Check previously saved theme
     const savedTheme: string | null = localStorage.getItem("rlappyTheme")
-    console.log(`savedTheme: ${savedTheme}`)
-    console.log(`LOCALSTORAGE ${localStorage.getItem("rlappyTheme")}`)
+
     // Sync Daisy theme with tailwind theme
     if (savedTheme) {
-      if (savedTheme === "dark") {
+      if (savedTheme === "dark" ) {
         document.documentElement.setAttribute("data-theme", "dark")
       } else {
         document.documentElement.setAttribute("data-theme", "light")
@@ -20,7 +19,7 @@ const InitTheme: React.FC = () => {
     // Use color scheme
     else {
         const preferDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        if (preferDarkScheme) document.documentElement.classList.add("dark")
+        if (preferDarkScheme) document.documentElement.setAttribute("data-theme", "dark")
     }
     
   })

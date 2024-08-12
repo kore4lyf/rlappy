@@ -5,28 +5,32 @@
 
 .nav-desktop .active {
   @apply font-bold after:content-[""] 
-  after:block after:h-[4px] after:bg-primary after:inset-0 
+  after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 
   after:mt-1 after:rounded;
 }
 
 .nav-mobile .active {
-  @apply font-bold text-white dark:text-primary !important;
+  @apply font-bold text-white bg-base-300 dark:text-primary !important;
 }
 
 .mbtn {
-  @apply btn border border-2 border-neutral 
-  hover:border-neutral;
+  @apply btn border border-2 border-base-300 
+  hover:border-base-300;
 }
 
 .mbtn-primary {
-  @apply btn-primary text-white dark:text-[#1d232a];
+  @apply btn-primary text-white dark:text-base-100;
 }
 
 .mbtn-ghost {
-  @apply btn-ghost text-black dark:text-gray-300 border border-2  
-  hover:border-neutral hover:bg-transparent;
+  @apply btn-ghost text-black border border-2  
+  hover:border-base-300 hover:bg-transparent dark:text-gray-300;
 }
 
-.text-default-dark {
-  @apply dark:text-[#1d232a];
+.footer .nav-header {
+  @apply tracking-widest uppercase font-bold;
+}
+
+.footer .nav-link {
+  @apply link link-hover tracking-wider text-gray-300 hover:text-primary dark:text-gray-300 dark:hover:text-primary capitalize;
 }

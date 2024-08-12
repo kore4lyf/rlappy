@@ -5,12 +5,12 @@ import Link from "next/link"
 import Image from "next/image"
 import rlappyLogo from '@/public/rlappy-logo.svg';
 import NavMenuDesktop from "./NavMenuDesktop"
-import NavAuthStatus from "./NavAuthStatus"
+import NavAuthSection from "./NavAuthSection"
 
 
 const NavBar: React.FC = () => {
   return (
-    <div className="navbar bg-base-100 py-4 border-b-4 border-neutral">
+    <div className="navbar bg-base-100 py-4 border-b-4 border-base-300">
     <div className="navbar-start">
       <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
       </Link>
     </div>
     <NavMenuDesktop />
-    <NavAuthStatus />
+    <NavAuthSection />
   </div>
   )
 }

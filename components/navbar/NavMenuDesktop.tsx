@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import { menuItems } from '@/utils/navMenuItems'
+import { menuItems } from '@/utils/headerNavMenuItems'
 import { usePathname } from 'next/navigation'
 
 const NavMenuDesktop = () => {
