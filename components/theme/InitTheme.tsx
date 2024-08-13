@@ -1,11 +1,12 @@
 "use client"
+import { getThemeFromLocalStorage } from "@/utils/themeStore"
 import React, { useEffect} from "react"
 
 const InitTheme: React.FC = () => {
 
   useEffect(() => {
     // Check previously saved theme
-    const savedTheme: string | null = localStorage.getItem("rlappyTheme")
+    const savedTheme: string | null = getThemeFromLocalStorage()
 
     // Sync Daisy theme with tailwind theme
     if (savedTheme) {

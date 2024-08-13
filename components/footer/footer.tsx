@@ -18,7 +18,7 @@ const Footer = () => {
 
     {navHeaders.map((navHead: string) => {
         const navSection: ImenuItemLink[] = menuItems[navHead as keyof ImenuItems]
-        console.log(typeof menuItems)
+        
         return <nav key={navHead}>
           <h6 className="nav-header"> { navHead } </h6>
 

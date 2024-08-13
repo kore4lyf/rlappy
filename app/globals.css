@@ -5,8 +5,7 @@
 
 .nav-desktop .active {
   @apply font-bold after:content-[""] 
-  after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 
-  after:mt-1 after:rounded;
+  after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 after:translate-y-[1.31rem] after:rounded;
 }
 
 .nav-mobile .active {
@@ -33,4 +32,8 @@
 
 .footer .nav-link {
   @apply link link-hover tracking-wider text-gray-300 hover:text-primary dark:text-gray-300 dark:hover:text-primary capitalize;
+}
+
+.auto-width {
+  @apply max-w-full md:max-w-[92%] border mx-auto ;
 }

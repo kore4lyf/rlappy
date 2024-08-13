@@ -1,20 +1,35 @@
 "use client"
-import { useState } from "react"
-import { FaSun } from "react-icons/fa6"
+import { getThemeFromLocalStorage } from "@/utils/themeStore"
+import React, { useEffect, useState } from "react"
+import { FaMoon, FaSun } from "react-icons/fa6"
 
 
-const toggleTheme = () => {
+const toggleTheme = (): string => {
   const html: HTMLElement = document.documentElement
   const currentTheme: string | null = html.getAttribute("data-theme")
   const newTheme: string = currentTheme === "light" ? "dark" : "light"
+
   html.setAttribute("data-theme", newTheme)
   localStorage.setItem("rlappyTheme", newTheme)
+
+  console.log(newTheme)
+  return newTheme
+
 }
 
-const ThemeSwitcherBtn = () => {
+const ThemeSwitcherBtn: React.FC = () => {
+  const [theme, setTheme] = useState<string>("")
+
+
+  useEffect(() => {
+    const currentTheme: string = getThemeFromLocalStorage()
+    setTheme(currentTheme)
+  })
   
   return (
-    <button className="btn btn-primary" onClick={toggleTheme}> <FaSun />  </button>
+    <button className="mbtn mbtn-ghost" onClick={() => setTheme(toggleTheme())}> 
+      {theme === "dark" ? <FaSun /> : <FaMoon />} 
+    </button>
   )
 }
 
