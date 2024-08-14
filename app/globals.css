@@ -3,37 +3,63 @@
 @tailwind utilities;
 
 
+/* Global */
+
+body {
+  @apply selection:bg-primary selection:text-base-100
+}
+
+
+/* Typography */
+
+h1, h2, h3, h4, h5 {
+  @apply font-bold text-black dark:text-base-content
+}
+
+h2 {
+  @apply text-2xl md:text-4xl
+}
+
+.text-default {
+  @apply text-black dark:text-base-content
+}
+
+
+
 .nav-desktop .active {
   @apply font-bold after:content-[""] 
-  after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 after:translate-y-[1.31rem] after:rounded;
+  after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 after:translate-y-[1.25rem] after:rounded after:border-2 dark:after:border-0 after:border-base-100 after:box-content
 }
 
 .nav-mobile .active {
-  @apply font-bold text-white bg-base-300 dark:text-primary !important;
+  @apply font-bold text-white bg-base-300 dark:text-primary !important
 }
 
 .mbtn {
   @apply btn border border-2 border-base-300 
-  hover:border-base-300;
+  hover:border-base-300
 }
 
 .mbtn-primary {
-  @apply btn-primary text-white dark:text-base-100;
+  @apply btn-primary text-white dark:text-base-100
+}
+
+.mbtn-secondary {
+  @apply btn-secondary text-white dark:text-base-content
 }
 
 .mbtn-ghost {
-  @apply btn-ghost text-black border border-2  
-  hover:border-base-300 hover:bg-transparent dark:text-gray-300;
+  @apply btn-ghost text-black border border-2 hover:border-base-300 hover:bg-transparent dark:text-gray-300
 }
 
 .footer .nav-header {
-  @apply tracking-widest uppercase font-bold;
+  @apply tracking-widest uppercase font-bold
 }
 
 .footer .nav-link {
-  @apply link link-hover tracking-wider text-gray-300 hover:text-primary dark:text-gray-300 dark:hover:text-primary capitalize;
+  @apply link link-hover tracking-wider text-gray-300 hover:text-primary dark:text-gray-300 dark:hover:text-primary capitalize
 }
 
 .auto-width {
-  @apply max-w-full md:max-w-[92%] border mx-auto ;
+  @apply max-w-full md:max-w-[90%] mx-auto px-4 md:px-0
 }

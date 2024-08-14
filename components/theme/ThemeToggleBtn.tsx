@@ -12,7 +12,6 @@ const toggleTheme = (): string => {
   html.setAttribute("data-theme", newTheme)
   localStorage.setItem("rlappyTheme", newTheme)
 
-  console.log(newTheme)
   return newTheme
 
 }
