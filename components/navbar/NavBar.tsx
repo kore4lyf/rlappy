@@ -11,7 +11,7 @@ import NavAuthSection from "./NavAuthSection"
 const NavBar: React.FC = () => {
   return (
     <div className="border-b-4 border-base-300">
-      <div className="navbar auto-width bg-base-100">
+      <div className="navbar autoWidth bg-base-100">
         <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

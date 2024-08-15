@@ -1,6 +1,7 @@
 
 import ThemeToggleBtn from "@/components/theme/ThemeToggleBtn"
 import Image from "next/image"
+import heroImg from '@/utils/images/heroimg.png';
 
 const HomePage = () => {
   return (
@@ -8,17 +9,23 @@ const HomePage = () => {
       
       
 
-      <div className="auto-width hero bg-base min-h-screen">
-  <div className="flex flex-col-reverse lg:flex-row justify-start">
-    {/* <Image alt="Image of a Laptop"
-      src="/next.svg"
-      className="max-w-sm rounded-lg shadow-2xl" /> */}
-    <div className="w-full sm:w-[50%]">
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight sm:w-[20ch] border">Unlock Your <span className="text-primary">Freedom</span></h1>
-      <p className="py-6 border w-full">
+      <div className="autoWidth hero min-h-screen mt-10">
+  <div className="flex flex-col lg:flex-row justify-start ">
+    <div className="mb-10 relative w-full">
+      <span className="disableImgDrag">
+        <Image alt="Image of a Laptop" src={heroImg} unoptimized={true}
+      className="max-w-[100%]" />
+      </span>
+    </div>
+    <div className="w-full">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight sm:max-w-[20ch]">Unlock Your <br/> <span className="text-primary">Freedom</span></h1>
+      <p className="py-6 w-full">
         Discover top-quality laptops for rent or list your own to start earning today. Seamless rentals, flexible terms, and guaranteed quality.
       </p>
-      <span>x</span>
+      <form>
+      <p>Rent a PC</p>
+        <input type="text" placeholder="Location"/>
+      </form>
     </div>
   </div>
 </div>
@@ -26,7 +33,7 @@ const HomePage = () => {
 
 
 
-<div className="auto-width py-5 text-default">
+<div className="autoWidth py-5 text-default">
   <div className="flex flex-wrap gap-8 justify-evenly">
     <div className="font-bold flex gap-2 flex-col items-center">
       <div className="text-3xl sm:text-4xl md:text-5xl">150+</div>

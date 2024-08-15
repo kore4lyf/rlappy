@@ -10,7 +10,7 @@ const Footer = () => {
   const navHeaders: string[] = Object.keys(menuItems)
 
   return <footer className="bg-base-300 text-white dark:text-base-content py-10">
-    <div className='footer auto-width'>
+    <div className='footer autoWidth'>
       <aside>
         <Image src={rlappyLogo} className="w-16 h-16 md:w-12 md:h-12 ml-[-6px]" alt="Rlappy Logo" />
         <span className="font-bold text-sm"> RLappy </span>
@@ -21,10 +21,10 @@ const Footer = () => {
           const navSection: ImenuItemLink[] = menuItems[navHead as keyof ImenuItems]
           
           return <nav key={navHead}>
-            <h6 className="nav-header"> { navHead } </h6>
+            <h6 className="navHeader"> { navHead } </h6>
 
             {navSection.map((item) => {
-              return <Link key={navHead} href={item.path} className="nav-link"> {item.name} </Link>
+              return <Link key={navHead} href={item.path} className="navLink"> {item.name} </Link>
             })}
           </nav>
         })}

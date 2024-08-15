@@ -35,6 +35,11 @@ h2 {
   @apply font-bold text-white bg-base-300 dark:text-primary !important
 }
 
+.hero-img {
+  @apply bg-[url("../utils/images/heroimg.png")] bg-no-repeat bg-contain bg-right;
+  background-size: 600px auto;
+}
+
 .mbtn {
   @apply btn border border-2 border-base-300 
   hover:border-base-300
@@ -52,14 +57,18 @@ h2 {
   @apply btn-ghost text-black border border-2 hover:border-base-300 hover:bg-transparent dark:text-gray-300
 }
 
-.footer .nav-header {
+.footer .navHeader {
   @apply tracking-widest uppercase font-bold
 }
 
-.footer .nav-link {
+.footer .navLink {
   @apply link link-hover tracking-wider text-gray-300 hover:text-primary dark:text-gray-300 dark:hover:text-primary capitalize
 }
 
-.auto-width {
+.autoWidth {
   @apply max-w-full md:max-w-[90%] mx-auto px-4 md:px-0
+}
+
+.disableImgDrag {
+  @apply after:content-[""] after:block  after:absolute after:h-full after:w-full after:top-0
 }
