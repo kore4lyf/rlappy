@@ -9,6 +9,11 @@ body {
   @apply selection:bg-primary selection:text-base-100
 }
 
+img {
+  @apply selection:bg-transparent;
+  -webkit-user-drag: none;
+}
+
 
 /* Typography */
 
@@ -25,7 +30,7 @@ h2 {
 }
 
 
-
+/* General */
 .nav-desktop .active {
   @apply font-bold after:content-[""] 
   after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 after:translate-y-[1.25rem] after:rounded after:border-2 dark:after:border-0 after:border-base-100 after:box-content
@@ -35,9 +40,9 @@ h2 {
   @apply font-bold text-white bg-base-300 dark:text-primary !important
 }
 
-.hero-img {
-  @apply bg-[url("../utils/images/heroimg.png")] bg-no-repeat bg-contain bg-right;
-  background-size: 600px auto;
+.heroImg {
+  @apply bg-[url("../utils/images/heroimg.png")] bg-no-repeat bg-contain bg-center;
+  background-size: auto auto;
 }
 
 .mbtn {

@@ -1,0 +1,33 @@
+"use client"
+
+import Image from 'next/image'
+import React from 'react'
+import heroImg from '@/utils/images/heroimg.png';
+
+const numbAction: React.MouseEventHandler<HTMLImageElement> = (e) => e.preventDefault()
+
+const Hero: React.FC = () => {
+  return (
+    <section className="autoWidth hero min-h-screen mt-10">
+      <div className="flex flex-col lg:flex-row justify-start ">
+        <div className="mb-10 relative w-full hidden sm:block">
+          <div className="disableImgDrg">
+            <Image alt="Image of a Laptop" src={heroImg} draggable="false" onContextMenu={numbAction}  className="max-w-[100%]" />
+          </div>
+        </div>
+        <div className="w-full">
+          <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold leading-tight">Unlock Your <span className="text-primary">Freedom</span></h1>
+            <p className="py-6 w-full">
+                Discover top-quality laptops for rent or list your own to start earning today. Seamless rentals, flexible terms, and guaranteed quality.
+            </p>
+            
+            <form>
+              <input type="text" placeholder="Location"/>
+            </form>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Hero
