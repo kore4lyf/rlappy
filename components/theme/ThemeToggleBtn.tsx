@@ -1,7 +1,7 @@
 "use client"
 import { getThemeFromLocalStorage } from "@/utils/themeStore"
 import React, { useEffect, useState } from "react"
-import { FaMoon, FaSun } from "react-icons/fa6"
+import { MdBrightness2, MdBrightness4, MdBrightness7 } from "react-icons/md"
 
 
 const toggleTheme = (): string => {
@@ -26,8 +26,8 @@ const ThemeSwitcherBtn: React.FC = () => {
   })
   
   return (
-    <button className="mbtn mbtn-ghost" onClick={() => setTheme(toggleTheme())}> 
-      {theme === "dark" ? <FaSun /> : <FaMoon />} 
+    <button className="btn btn-ghost" onClick={() => setTheme(toggleTheme())}> 
+      {theme === "dark" ? <MdBrightness7 className="w-4 h-4" /> : <MdBrightness2 className="w-4 h-4" />} 
     </button>
   )
 }

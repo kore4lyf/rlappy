@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <InitTheme/>
       <body className={`${poppins.className} text-default`}>
-        <main>
+        <main className="grid grid-flow-row gap-10">
           <NavBar />
           {children}
           <Footer />

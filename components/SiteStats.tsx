@@ -2,7 +2,7 @@ import React from 'react'
 
 const SiteStats = () => {
   return (
-    <section className="autoWidth py-5 text-default">
+    <section className="w-full autoWidth py-5 text-default">
       <div className="flex flex-wrap gap-8 justify-evenly">
         <div className="font-bold flex gap-2 flex-col items-center">
             <div className="text-3xl sm:text-4xl md:text-5xl">150+</div>
