@@ -63,6 +63,9 @@ h2 {
   @apply btn-secondary text-white dark:text-base-content
 }
 
+.borderNeutral {
+  border-color: #a7a7a720
+}
 
 .footer .navHeader {
   @apply tracking-widest uppercase font-bold
@@ -73,16 +76,21 @@ h2 {
 }
 
 .autoWidth {
-  @apply max-w-full md:max-w-[90%] mx-auto px-4 md:px-0
+  @apply w-full md:w-[90%] mx-auto px-4 md:px-0
 }
 
 .disableImgDrag {
   @apply after:content-[""] after:block  after:absolute after:h-full after:w-full after:top-0
 }
 
+.carouselItem {
+  @apply carousel-item border borderNeutral w-64 flex-col gap-4 h-fit p-5 rounded-box shadow-md after:content-[close-quote] after:block after:absolute after:top-0 after:translate-x-[11.6rem] after:translate-y-[-2.4rem] after:text-[15rem] after:mix-blend-multiply dark:after:mix-blend-multiply after:text-base-300 after:opacity-5 dark:after:opacity-30 before:content-[open-quote] before:sr-only
+}
+
+
+
 
 /* Medai Queries */
-
 
 
 /* This media querie was created to target screen smaller than tailwinds sm: */

@@ -1,13 +1,21 @@
+"use client"
+
+
 import Hero from "@/components/hero/Hero";
-import SiteStats from "@/components/SiteStats";
-import { MdDiamond, MdLocationPin, MdSearch } from "react-icons/md";
+import Testimonials from "@/components/Testimonials";
 
 const HomePage = () => {
   return (
     <>
-      
     <Hero />
-    <SiteStats />
+
+
+    <section>
+      <h2 className="text-4xl autoWidth">Brands</h2>
+    </section>
+    
+    <Testimonials />
+    
 
       
     </>
