@@ -23,7 +23,7 @@ const ThemeSwitcherBtn: React.FC = () => {
   useEffect(() => {
     const currentTheme: string = getThemeFromLocalStorage()
     setTheme(currentTheme)
-  })
+  },[])
   
   return (
     <button className="btn btn-ghost" onClick={() => setTheme(toggleTheme())}> 

@@ -17,7 +17,7 @@ const Brands: React.FC = () => {
     const reduceMotionEffect = () => {
       if(!reducedMotion()) {
         if(brands.current && brandsContainer.current) {
-          brands.current.classList.add("animate")
+          brands.currentd.classList.add("animate")
           brandsContainer.current.classList.remove("autoWidth")
           brands.current.classList.remove("flex-wrap")
         } 
@@ -32,7 +32,7 @@ const Brands: React.FC = () => {
     }
 
     reduceMotionEffect()      
-  })
+  },[])
 
   return (
     <section className="sectionFlow bg-base-300 text-neutral-content overflow-hidden">
@@ -91,7 +91,7 @@ const Brands: React.FC = () => {
           <li>
             <SiMicrosoft className="text-6xl" /> 
           </li>
-          <li>
+          <li>s
             <SiSony className="text-7xl" /> 
           </li>
           <li>

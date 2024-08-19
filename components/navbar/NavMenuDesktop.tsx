@@ -4,13 +4,14 @@ import { menuItems } from '@/utils/headerNavMenuItems'
 import { usePathname } from 'next/navigation'
 
 const NavMenuDesktop: React.FC = () => {
-  console.log(usePathname())
+  const currentPath: string = usePathname()
+
   return (
     <nav className="nav-desktop relative navbar-center hidden lg:flex">
       <ul className="flex gap-10">
         {menuItems.map((item) => {
           return <li key={item.name}>
-          <Link href={item.path} className={`${ item.path === usePathname() && "active"} text-lg dark:hover:text-primary hover:font-bold`}>{item.name}</Link>
+          <Link href={item.path} className={`${ item.path === currentPath && "active"} text-lg dark:hover:text-primary hover:font-bold`}>{item.name}</Link>
         </li>})}
       </ul>
     </nav>
