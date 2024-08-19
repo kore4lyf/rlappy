@@ -9,8 +9,8 @@ import { SiAcer, SiAlienware, SiAsus, SiDell, SiHuawei, SiIntel, SiLenovo, SiLg,
 
 
 const Brands: React.FC = () => {
-  const brands: React.RefObject<HTMLUListElement | null | undefined> = useRef()
-  const brandsContainer: React.RefObject<HTMLUListElement | null | undefined> = useRef()
+  const brandsContainer = useRef<HTMLDivElement>(null);
+  const brands = useRef<HTMLUListElement>(null);
   
   useLayoutEffect(() => {
     // Do not animate brands if user prefers reduced motion
