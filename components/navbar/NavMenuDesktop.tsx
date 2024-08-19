@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { menuItems } from '@/utils/headerNavMenuItems'
 import { usePathname } from 'next/navigation'
 
-const NavMenuDesktop = () => {
+const NavMenuDesktop: React.FC = () => {
   console.log(usePathname())
   return (
     <nav className="nav-desktop relative navbar-center hidden lg:flex">

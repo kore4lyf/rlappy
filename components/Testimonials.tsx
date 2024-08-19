@@ -2,12 +2,12 @@ import { testimonials } from '@/utils/testimonials'
 import Image from 'next/image'
 import React from 'react'
 
-const Testimonials = () => {
+const Testimonials: React.FC = () => {
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col gap-5">
+      <div className="sectionFlow">
         <h2 className="text-4xl autoWidth">Testimonials</h2>
-        <div className="carousel carousel-center space-x-4 px-[5%] p-4 pb-10 max-w-full relative overflow-y-hidden">
+        <div className="carousel carousel-center space-x-4 px-[5%] p-4 pb-5 max-w-full relative overflow-y-hidden">
 
         {testimonials.map((testimonial) =>  {
           return <div className="carouselItem" key={testimonial.name}>

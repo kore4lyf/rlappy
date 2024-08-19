@@ -1,10 +1,10 @@
 "use client"
-import { getThemeFromLocalStorage } from "@/utils/themeStore"
-import React, { useEffect} from "react"
+import { getThemeFromLocalStorage } from "@/utils/systemInfo"
+import React, { useLayoutEffect } from "react"
 
 const InitTheme: React.FC = () => {
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Check previously saved theme
     const savedTheme: string = getThemeFromLocalStorage()
 

@@ -14,6 +14,10 @@ img {
   -webkit-user-drag: none;
 }
 
+section {
+  @apply py-16 
+}
+
 
 /* Typography */
 
@@ -37,7 +41,7 @@ h2 {
 }
 
 .nav-mobile .active {
-  @apply font-bold text-white bg-base-300 dark:text-primary !important
+  @apply font-bold text-white bg-primary dark:text-base-300 !important
 }
 
 .heroImg {
@@ -72,7 +76,7 @@ h2 {
 }
 
 .footer .navLink {
-  @apply link link-hover tracking-wider text-gray-300 hover:text-primary dark:text-gray-300 dark:hover:text-primary capitalize
+  @apply tracking-wider text-gray-300 capitalize hover:text-primary dark:text-gray-300 dark:hover:text-primary  
 }
 
 .autoWidth {
@@ -86,6 +90,36 @@ h2 {
 .carouselItem {
   @apply carousel-item border borderNeutral w-64 flex-col gap-4 h-fit p-5 rounded-box shadow-md after:content-[close-quote] after:block after:absolute after:top-0 after:translate-x-[11.6rem] after:translate-y-[-2.4rem] after:text-[15rem] after:mix-blend-multiply dark:after:mix-blend-multiply after:text-base-300 after:opacity-5 dark:after:opacity-30 before:content-[open-quote] before:sr-only
 }
+
+.sectionFlow {
+  @apply flex flex-col gap-10;
+}
+
+.brands.animate {
+  animation: slide 10s linear infinite;
+}
+
+.brandsContainer {
+  -webkit-mask: linear-gradient(to left, transparent, black, transparent);
+  mask: linear-gradient(to left, transparent, black 80%, transparent);
+}
+
+.brands:hover {
+  animation-play-state: paused;
+}
+
+
+
+
+/* Keyframes */
+
+@keyframes slide {
+  
+  to {
+    transform: translateX(calc(-50% - 1.25rem));
+  }
+}
+
 
 
 

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SiteStats = () => {
+const SiteStats: React.FC = () => {
   return (
-    <section className="w-full py-5">
+    <section className="w-full">
       <div className="flex flex-wrap md:flex-nowrap gap-8 justify-evenly sm:justify-between">
         <div className="font-bold flex gap-2 flex-col items-center">
             <div className="text-4xl">150+</div>
