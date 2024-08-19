@@ -17,7 +17,7 @@ const Brands: React.FC = () => {
     const reduceMotionEffect = () => {
       if(!reducedMotion()) {
         if(brands.current && brandsContainer.current) {
-          brands.currentd.classList.add("animate")
+          brands.current.classList.add("animate")
           brandsContainer.current.classList.remove("autoWidth")
           brands.current.classList.remove("flex-wrap")
         } 
