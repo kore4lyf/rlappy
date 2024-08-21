@@ -37,7 +37,7 @@ h2 {
 /* General */
 .nav-desktop .active {
   @apply font-bold after:content-[""] 
-  after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 after:translate-y-[1.25rem] after:rounded after:border-2 dark:after:border-0 after:border-base-100 after:box-content
+  after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 after:translate-y-[1.25rem] after:rounded after:border-2 dark:after:border-0 after:border-base-100 after:box-content;
 }
 
 .nav-mobile .active {
@@ -48,16 +48,6 @@ h2 {
   @apply bg-[url("../utils/images/heroimg.png")] bg-no-repeat bg-contain bg-center;
   background-size: auto auto;
 }
-
-/* .mbtn {
-  @apply btn border-2 border-base-300 
-  hover:border-base-300
-} 
-.mbtn-ghost {
-  @apply btn-ghost text-black border border-2 hover:border-base-300 hover:bg-transparent dark:text-gray-300
-}
-  
-*/
 
 .mbtn-primary {
   @apply btn-primary text-white dark:text-base-100
@@ -88,7 +78,7 @@ h2 {
 }
 
 .carouselItem {
-  @apply carousel-item border borderNeutral w-64 flex-col gap-4 h-fit p-5 rounded-box shadow-md after:content-[close-quote] after:block after:absolute after:top-0 after:translate-x-[11.6rem] after:translate-y-[-2.4rem] after:text-[15rem] after:mix-blend-multiply dark:after:mix-blend-multiply after:text-base-300 after:opacity-5 dark:after:opacity-30 before:content-[open-quote] before:sr-only
+  @apply carousel-item border borderNeutral w-64 flex-col gap-4 h-fit p-5 rounded-box shadow-md after:content-[close-quote] after:block after:absolute after:top-0 after:translate-x-[12.6rem] after:translate-y-[-1.4rem] after:text-[10rem] after:mix-blend-multiply dark:after:mix-blend-multiply after:text-base-300 after:opacity-5 dark:after:opacity-10 before:content-[open-quote] after:font-serif before:sr-only
 }
 
 .sectionFlow {
