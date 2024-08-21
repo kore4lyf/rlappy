@@ -96,12 +96,12 @@ h2 {
 }
 
 .brands.animate {
-  animation: slide 10s linear infinite;
+  animation: slide 30s linear infinite;
 }
 
 .brandsContainer {
-  -webkit-mask: linear-gradient(to left, transparent, black, transparent);
-  mask: linear-gradient(to left, transparent, black 80%, transparent);
+  /* -webkit-mask-image: linear-gradient(to left, transparent, black, transparent); */
+  mask-image: linear-gradient(to left, transparent, black, transparent);
 }
 
 .brands:hover {

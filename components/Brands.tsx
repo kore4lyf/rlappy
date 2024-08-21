@@ -13,24 +13,41 @@ const Brands: React.FC = () => {
   const brands = useRef<HTMLUListElement>(null);
   
   useLayoutEffect(() => {
+    const cloneBrandItems = () => {
+      // get brands items
+      const brandItemsCollection: HTMLCollection | undefined = brands.current?.children
+
+
+
+      if (brandItemsCollection) {
+        const brandItems: Element[] = Array.from(brandItemsCollection)
+
+        for(const item of brandItems) {
+          const newItem = item.cloneNode(true)
+          brands.current?.appendChild(newItem)
+          
+          item.setAttribute("aria-hidden", "true")
+        }
+      } 
+    }
+
     // Do not animate brands if user prefers reduced motion
     const reduceMotionEffect = () => {
       if(!reducedMotion()) {
-        if(brands.current && brandsContainer.current) {
-          brands.current.classList.add("animate")
-          brandsContainer.current.classList.remove("autoWidth")
-          brands.current.classList.remove("flex-wrap")
-        } 
+        brands.current?.classList.add("animate")
+        brands.current?.classList.remove("flex-wrap")
+        brandsContainer.current?.classList.remove("autoWidth")
+        
+        // Clone brands for smooth animation
+        cloneBrandItems()
       }
       else {
-        if(brands.current && brandsContainer.current) {
-          brands.current.classList.remove("animate")
-          brands.current.classList.add("flex-wrap")
-          brandsContainer.current.classList.add("autoWidth")
-        }
+        brands.current?.classList.remove("animate")
+        brands.current?.classList.add("flex-wrap")
+        brandsContainer.current?.classList.add("autoWidth")
       }
     }
-
+    
     reduceMotionEffect()      
   },[])
 
@@ -54,27 +71,23 @@ const Brands: React.FC = () => {
           <li>
             <GrHp className="text-6xl" />
           </li>
-          <li>
-            <div className="h-12 flex items-center overflow-hidden">
+          <li className="h-12 flex items-center overflow-hidden">
               <SiSamsung className="text-9xl" />
-            </div>
           </li>
           <li>
             <SiDell className="text-7xl" />
           </li>
-          <li>
-            <div className="h-12 flex items-center overflow-hidden">
+          <li className="h-12 flex items-center overflow-hidden">
               <SiLenovo className="text-9xl" />  
-            </div>  
           </li>
-          <li>
-            <SiLg className="text-7xl" /> 
+          <li className="h-12 flex items-center overflow-hidden">
+            <SiLg className="text-8xl" /> 
           </li>
           <li>
             <SiRazer className="text-7xl" /> 
           </li>
-          <li>
-            <SiToshiba className="text-7xl" /> 
+          <li className="h-12 flex items-center overflow-hidden">
+            <SiToshiba className="text-9xl" /> 
           </li>
           <li>
             <SiIntel className="text-7xl" /> 
@@ -85,74 +98,14 @@ const Brands: React.FC = () => {
           <li>
             <SiAlienware className="text-6xl" /> 
           </li>
-          <li>
-            <SiThinkpad className="text-7xl" /> 
+          <li className="h-12 flex items-center overflow-hidden">
+            <SiThinkpad className="text-8xl" /> 
           </li>
           <li>
             <SiMicrosoft className="text-6xl" /> 
           </li>
-          <li>s
-            <SiSony className="text-7xl" /> 
-          </li>
-          <li>
-            <SiXiaomi className="text-6xl" /> 
-          </li>
-          
-          
-          <li>
-            <FaApple className="text-6xl text-primary" />
-          </li>
-          <li>
-          <SiAcer className="text-7xl" /> 
-          </li>
-          <li>
-            <FaChrome className="text-6xl" />
-          </li>
-          <li>
-            <SiAsus className="text-7xl" /> 
-          </li>
-          <li>
-            <GrHp className="text-6xl" />
-          </li>
-          <li>
-            <div className="h-12 flex items-center overflow-hidden">
-              <SiSamsung className="text-9xl" />
-            </div>
-          </li>
-          <li>
-            <SiDell className="text-7xl" />
-          </li>
-          <li>
-            <div className="h-12 flex items-center overflow-hidden">
-              <SiLenovo className="text-9xl" />  
-            </div>  
-          </li>
-          <li>
-            <SiLg className="text-7xl" /> 
-          </li>
-          <li>
-            <SiRazer className="text-7xl" /> 
-          </li>
-          <li>
-            <SiToshiba className="text-7xl" /> 
-          </li>
-          <li>
-            <SiIntel className="text-7xl" /> 
-          </li>
-          <li>
-            <SiHuawei className="text-7xl" /> 
-          </li>
-          <li>
-            <SiAlienware className="text-6xl" /> 
-          </li>
-          <li>
-            <SiThinkpad className="text-7xl" /> 
-          </li>
-          <li>
-            <SiMicrosoft className="text-6xl" /> 
-          </li>
-          <li>
-            <SiSony className="text-7xl" /> 
+          <li className="h-12 flex items-center overflow-hidden">
+            <SiSony className="text-8xl" /> 
           </li>
           <li>
             <SiXiaomi className="text-6xl" /> 

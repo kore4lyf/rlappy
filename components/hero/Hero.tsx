@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
     <section className="border-b-4 border-base-300 xl:py-32">
       <div className="autoWidth hero">
         <div className="flex flex-col lg:flex-row justify-start ">
-          <div className="mb-10 relative w-full hidden xl:block">
+          <div className="mb-10 relative w-full hidden lg:block">
               <Image alt="Image of a Laptop" unoptimized={true} src={heroImg} draggable="false" onContextMenu={numbAction}  className="max-w-full" />
           </div>
           <div className="w-full grid grid-flow-row">
