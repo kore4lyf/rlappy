@@ -6,7 +6,7 @@ const InitTheme: React.FC = () => {
 
   useLayoutEffect(() => {
     // Check previously saved theme
-    const savedTheme: string = getThemeFromLocalStorage()
+    const savedTheme: "light" | "dark" = getThemeFromLocalStorage()
 
     // Sync Daisy theme with tailwind theme
     if (savedTheme === "dark" ) {

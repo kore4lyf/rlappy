@@ -21,7 +21,7 @@ const ThemeSwitcherBtn: React.FC = () => {
 
 
   useEffect(() => {
-    const currentTheme: string = getThemeFromLocalStorage()
+    const currentTheme: "light" | "dark" = getThemeFromLocalStorage()
     setTheme(currentTheme)
   },[])
   

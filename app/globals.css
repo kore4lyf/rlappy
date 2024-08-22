@@ -34,14 +34,14 @@ h2 {
 }
 
 
-/* General */
+/* component */
 .nav-desktop .active {
   @apply font-bold after:content-[""] 
   after:block after:h-[4px] after:w-10 after:mx-auto after:bg-primary after:inset-0 after:translate-y-[1.25rem] after:rounded after:border-2 dark:after:border-0 after:border-base-100 after:box-content;
 }
 
 .nav-mobile .active {
-  @apply font-bold text-white bg-primary dark:text-base-300 !important
+  @apply font-bold text-white bg-black dark:bg-primary dark:text-base-300 !important
 }
 
 .heroImg {
@@ -69,6 +69,46 @@ h2 {
   @apply tracking-wider text-gray-300 capitalize hover:text-primary dark:text-gray-300 dark:hover:text-primary  
 }
 
+.carouselItem {
+  @apply carousel-item border borderNeutral w-64 flex-col gap-4 h-fit p-5 rounded-box hover:shadow-lg transition-shadow after:content-[close-quote] after:block after:absolute after:top-0 after:translate-x-[12.6rem] after:translate-y-[-1.4rem] after:text-[10rem] after:mix-blend-multiply dark:after:mix-blend-multiply after:text-base-300 after:opacity-5 dark:after:opacity-10 before:content-[open-quote] after:font-serif before:sr-only
+}
+
+.brands.animate {
+  animation: slide 30s linear infinite;
+}
+          
+.brandsContainer {
+  -webkit-mask: linear-gradient(to left, transparent, black, transparent);
+  mask: linear-gradient(to left, transparent, black, transparent);
+}
+
+.brands:hover {
+  animation-play-state: paused;
+}
+
+.howItWorks ul {
+  @apply gap-10 justify-evenly flex flex-wrap;
+
+  & li {
+    @apply flex flex-col gap-5 w-80 border borderNeutral rounded-2xl p-5 hover:shadow-lg;
+  }
+
+  & h3 {
+    @apply capitalize text-center text-xl text-primary dark:text-primary;
+  }
+
+  & .icon {
+    @apply mx-auto text-7xl text-gray-500 opacity-50;
+  }
+}
+
+
+/* Utility */
+
+.sectionFlow {
+  @apply flex flex-col gap-10;
+}
+
 .autoWidth {
   @apply w-full md:w-[90%] mx-auto px-4 md:px-0
 }
@@ -77,40 +117,14 @@ h2 {
   @apply after:content-[""] after:block  after:absolute after:h-full after:w-full after:top-0
 }
 
-.carouselItem {
-  @apply carousel-item border borderNeutral w-64 flex-col gap-4 h-fit p-5 rounded-box shadow-md after:content-[close-quote] after:block after:absolute after:top-0 after:translate-x-[12.6rem] after:translate-y-[-1.4rem] after:text-[10rem] after:mix-blend-multiply dark:after:mix-blend-multiply after:text-base-300 after:opacity-5 dark:after:opacity-10 before:content-[open-quote] after:font-serif before:sr-only
-}
-
-.sectionFlow {
-  @apply flex flex-col gap-10;
-}
-
-.brands.animate {
-  animation: slide 30s linear infinite;
-}
-
-.brandsContainer {
-  /* -webkit-mask-image: linear-gradient(to left, transparent, black, transparent); */
-  mask-image: linear-gradient(to left, transparent, black, transparent);
-}
-
-.brands:hover {
-  animation-play-state: paused;
-}
-
-
-
 
 /* Keyframes */
 
 @keyframes slide {
-  
   to {
     transform: translateX(calc(-50% - 1.25rem));
   }
 }
-
-
 
 
 

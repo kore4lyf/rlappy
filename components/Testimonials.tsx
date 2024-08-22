@@ -7,10 +7,10 @@ const Testimonials: React.FC = () => {
     <section className="overflow-hidden">
       <div className="sectionFlow">
         <h2 className="text-4xl autoWidth">Testimonials</h2>
-        <div className="carousel carousel-center space-x-4 px-[5%] p-4 pb-5 max-w-full relative overflow-y-hidden">
+        <ul className="carousel carousel-center space-x-4 px-[5%] p-4 pb-5 max-w-full relative overflow-y-hidden">
 
         {testimonials.map((testimonial) =>  {
-          return <div className="carouselItem" key={testimonial.name}>
+          return <li className="carouselItem" key={testimonial.name}>
             <p>
               {testimonial.message}
             </p>
@@ -21,11 +21,11 @@ const Testimonials: React.FC = () => {
                 <span className="capitalize text-xs text-gray-400">{testimonial.occupation}</span>
               </div>
             </div>
-          </div>
+          </li>
         })}
 
         
-      </div>
+      </ul>
       </div>
     </section>
   )
