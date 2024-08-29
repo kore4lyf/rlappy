@@ -11,7 +11,7 @@ const HowItworks = () => {
             <MdOutlineManageSearch className="icon"/>
             <h3>Browse & Choose</h3>
             <p>
-              Explore our extensive catalog of top-quality laptos. Filter by brand, specification, or rental duration to find the perfect match for your needs. Once you've found the right laptop simply select it.
+              Explore our extensive catalog of top-quality laptos. Filter by brand, specification, or rental duration to find the perfect match for your needs. Once you&apos;ve found the right laptop simply select it.
             </p>
           </li>
 
@@ -29,7 +29,7 @@ const HowItworks = () => {
           <MdDoneAll className="icon"/>
           <h3>Finalize & Pickup</h3>
             <p>
-              Complete the rental agreement to secure your laptop. After confirmation, you'll recieve instructions for pickup or delivery. It's that simple.
+              Complete the rental agreement to secure your laptop. After confirmation, you&apos;ll recieve instructions for pickup or delivery. It&apos;s that simple.
             </p>
           </li>
         </ul>
